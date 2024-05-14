@@ -37,7 +37,7 @@ button.neumorphic {
     font-size: 31cqi;
   }
   > span{
-    font-family: system-ui, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 16cqi;
     
   }
@@ -46,11 +46,12 @@ button.neumorphic {
 body {
   background-color: #e5e9f4;
   padding: 2rem;
+  
 }
 h1 {
   text-align: center;
   color: hsl(0 0% 10%);
-  font-family: system-ui, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 3rem;
 }
 .buttons {
@@ -60,6 +61,7 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(min(8rem, 100%), 1fr));
   gap: 2rem;
 }
+
 
 .marquee {
 	margin: 0 auto;
@@ -79,7 +81,7 @@ h1 {
 	display: inline-block;
 	padding-left: 100%;
 	animation: marquee 20s linear infinite;
-    font-family: system-ui, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .marquee span span {
@@ -100,7 +102,7 @@ h1 {
     width: auto;
     height: auto;
     text-align: center;
-    font-family: system-ui, sans-serif;
+    font-family: 'Courier New', Courier, monospace;;
     border-radius: 2rem;
     box-shadow:   0 0 0.25rem 0.25rem #EEF1EF,
                   -1rem -1rem 1.5rem #FFFFFF,
@@ -118,7 +120,7 @@ a.underline-hover-effect {
   
   .underline-hover-effect {
     display: inline-block;
-    padding-bottom: 0.25rem; /* defines the space between text and underline */
+    padding-bottom: 0.25rem;
     position: relative;
   }
   
@@ -139,7 +141,59 @@ a.underline-hover-effect {
 .credits {
     text-align: center;
     padding-bottom: 2em;
-    font-family: system-ui, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
 
+  }
+
+  button.vip {
+    container-type: inline-size;
+    aspect-ratio: 1/1;
+    border: 0.5rem solid transparent;
+    border-radius: 2rem;
+    color: hsl(0 0% 10%);
+    
+    background: none;
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+    
+    --shadow: 
+      -.5rem -.5rem 1rem hsl(0 0% 100% / .75),
+      .5rem .5rem 1rem hsl(0 0% 50% / .5);
+    box-shadow: var(--shadow);
+    outline: none;  
+    transition: all 0.1s;
+    
+    &:hover, &:focus-visible {
+      color: hsl(10 80% 50%);
+      scale: 1.1
+    }
+    &:active, &.active{
+      box-shadow:
+        var(--shadow),
+        inset .5rem .5rem 1rem hsl(0 0% 50% / .5),
+        inset -.5rem -.5rem 1rem hsl(0 0% 100% / .75);
+      color: hsl(10 80% 50%);
+      > i { font-size: 25cqi};
+      > span { font-size: 10cqi};
+    }
+  
+    >i {
+      font-size: 25cqi;
+    }
+    > span{
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 10cqi;
+      
+    }
+  }
+
+  .vip1 {
+    display: grid;
+    width: min(15rem);
+    margin-inline: auto;
+    margin-bottom: 2cm;
+ 
+    gap: 2rem;
   }
