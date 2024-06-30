@@ -37,8 +37,9 @@ button.neumorphic {
     font-size: 31cqi;
   }
   > span{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Silkscreen", sans-serif;
     font-size: 16cqi;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     
   }
 }
@@ -49,10 +50,12 @@ body {
   
 }
 h1 {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 200;
+  font-style: normal;
   text-align: center;
-  color: hsl(0 0% 10%);
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 3rem;
+  font-size: 3cqi;
+  text-shadow: 1px 1px 9px rgba(0, 0, 0, 1);
 }
 .buttons {
   display: grid;
@@ -60,6 +63,7 @@ h1 {
   margin-inline: auto;
   grid-template-columns: repeat(auto-fit, minmax(min(8rem, 100%), 1fr));
   gap: 2rem;
+  margin-top: 2cm;
 }
 
 
@@ -75,18 +79,21 @@ h1 {
 	right: 0;
     border: 0.5rem solid transparent;
     border-radius: 1rem;
+    font-family: "Silkscreen", sans-serif;
 }
     
 .marquee > span {
 	display: inline-block;
 	padding-left: 100%;
 	animation: marquee 20s linear infinite;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Silkscreen", sans-serif;
 }
 
 .marquee span span {
 	padding-left: 2em;
 	padding-right: 2em;
+  font-family: "Silkscreen", sans-serif;
+  
 }
 
 @keyframes marquee {
@@ -102,7 +109,9 @@ h1 {
     width: auto;
     height: auto;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;;
+    font-family: "Chakra Petch", sans-serif;
+  font-weight: 400;
+  font-style: normal;
     border-radius: 2rem;
     box-shadow:   0 0 0.25rem 0.25rem #EEF1EF,
                   -1rem -1rem 1.5rem #FFFFFF,
@@ -110,7 +119,9 @@ h1 {
                   -2rem -2rem 2.5rem #FFFFFF,
                   2rem 2rem 2.5rem #3F5A5230;
                   margin: auto;
-                  margin-top: 1cm;
+                  margin-top: 2cm;
+                  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+                
 }
 
 a.underline-hover-effect {
@@ -141,7 +152,7 @@ a.underline-hover-effect {
 .credits {
     text-align: center;
     padding-bottom: 2em;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Silkscreen", sans-serif;
     text-decoration: none;
   }
 
@@ -193,6 +204,22 @@ a.underline-hover-effect {
     width: min(15rem);
     margin-inline: auto;
     margin-bottom: 2cm;
- 
+    
     gap: 2rem;
   }
+
+
+.info1{
+  width: auto;
+  height: auto;
+  text-align: center;
+  font-family: "Silkscreen", sans-serif;
+  border-radius: 2rem;
+  box-shadow:   0 0 0.25rem 0.25rem #EEF1EF,
+                -1rem -1rem 1.5rem #FFFFFF,
+                1rem 1rem 1.5rem #3F5A5230,
+                -2rem -2rem 2.5rem #FFFFFF,
+                2rem 2rem 2.5rem #3F5A5230;
+                margin: auto;
+                margin-top: 1cm;
+}
