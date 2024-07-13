@@ -12,31 +12,52 @@
     <link rel="icon" type="image/png" sizes="500x500" href="assets/img/logo.png">
     <link rel="icon" type="image/png" sizes="500x500" href="assets/img/logo.png">
     <link rel="icon" type="image/png" sizes="500x500" href="assets/img/logo.png">
-    <link rel="stylesheet" href="assets/ctor-bootstrap/css/ctor.min.css">
+    <link rel="stylesheet" href="assets/ctor/css/ctor.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/bs-theme-overrides.css">
     <link rel="stylesheet" href="assets/css/aos.min.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Banner-Heading-Image-images.css">
+    <link rel="stylesheet" href="assets/css/Lightbox-Gallery-baguetteBox.min.css">
 </head>
 <script>
-       // Disable right-click and Inspect Element
-       document.addEventListener('contextmenu', (e) => e.preventDefault());
-    
-    function ctrlShiftKey(e, keyCode) {
-        return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
-    }
-    
-    document.onkeydown = (e) => {
-        // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
-        if (
-        event.keyCode === 123 ||
-        ctrlShiftKey(e, 'I') ||
-        ctrlShiftKey(e, 'J') ||
-        ctrlShiftKey(e, 'C') ||
-        (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
-        )
-        return false;
-    };
+    // Disable right-click and Inspect Element
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+ 
+ function ctrlShiftKey(e, keyCode) {
+     return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+ }
+ 
+ document.onkeydown = (e) => {
+     // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+     if (
+     event.keyCode === 123 ||
+     ctrlShiftKey(e, 'I') ||
+     ctrlShiftKey(e, 'J') ||
+     ctrlShiftKey(e, 'C') ||
+     (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+     )
+     return false;
+ };
 </script>
+<script>
+    var countDownDate = new Date("Aug 15, 2024 12:00:00").getTime();
+
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("bomb").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("bomb").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
 <body>
     <nav class="navbar navbar-expand-md sticky-top shadow-lg navbar-shrink py-3" id="mainNav">
         <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span>CANVA PRO ROOMS</span></a><button data-bs-toggle="collapse" class="navbar-toggler bg-success border rounded-pill shadow" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
@@ -98,28 +119,44 @@
                     <div class="col mb-4">
                         <div class="card shadow-lg">
                             <div class="card-body px-4 py-5 px-md-5" style="background: rgba(255,255,255,0);">
-                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-hand-thumbs-down text-success">
-                                        <path d="M8.864 15.674c-.956.24-1.843-.484-1.908-1.42-.072-1.05-.23-2.015-.428-2.59-.125-.36-.479-1.012-1.04-1.638-.557-.624-1.282-1.179-2.131-1.41C2.685 8.432 2 7.85 2 7V3c0-.845.682-1.464 1.448-1.546 1.07-.113 1.564-.415 2.068-.723l.048-.029c.272-.166.578-.349.97-.484C6.931.08 7.395 0 8 0h3.5c.937 0 1.599.478 1.934 1.064.164.287.254.607.254.913 0 .152-.023.312-.077.464.201.262.38.577.488.9.11.33.172.762.004 1.15.069.13.12.268.159.403.077.27.113.567.113.856 0 .289-.036.586-.113.856-.035.12-.08.244-.138.363.394.571.418 1.2.234 1.733-.206.592-.682 1.1-1.2 1.272-.847.283-1.803.276-2.516.211a9.877 9.877 0 0 1-.443-.05 9.364 9.364 0 0 1-.062 4.51c-.138.508-.55.848-1.012.964zM11.5 1H8c-.51 0-.863.068-1.14.163-.281.097-.506.229-.776.393l-.04.025c-.555.338-1.198.73-2.49.868-.333.035-.554.29-.554.55V7c0 .255.226.543.62.65 1.095.3 1.977.997 2.614 1.709.635.71 1.064 1.475 1.238 1.977.243.7.407 1.768.482 2.85.025.362.36.595.667.518l.262-.065c.16-.04.258-.144.288-.255a8.34 8.34 0 0 0-.145-4.726.5.5 0 0 1 .595-.643h.003l.014.004.058.013a8.912 8.912 0 0 0 1.036.157c.663.06 1.457.054 2.11-.163.175-.059.45-.301.57-.651.107-.308.087-.67-.266-1.021L12.793 7l.353-.354c.043-.042.105-.14.154-.315.048-.167.075-.37.075-.581 0-.211-.027-.414-.075-.581-.05-.174-.111-.273-.154-.315l-.353-.354.353-.354c.047-.047.109-.176.005-.488a2.224 2.224 0 0 0-.505-.804l-.353-.354.353-.354c.006-.005.041-.05.041-.17a.866.866 0 0 0-.121-.415C12.4 1.272 12.063 1 11.5 1"></path>
+                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-mood-sad text-success">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                                        <path d="M9 10l.01 0"></path>
+                                        <path d="M15 10l.01 0"></path>
+                                        <path d="M9.5 15.25a3.5 3.5 0 0 1 5 0"></path>
                                     </svg></div>
-                                <h5 class="fw-bold card-title">NO ADS</h5>
-                                <p class="text-muted card-text mb-4">Others that are free like Telegram or any other link have ads, here on my website it is clean and without ads.</p><button class="btn btn-primary disabled shadow" type="button" disabled="">Learn more</button>
+                                <h5 class="fw-bold card-title">WITH ADS BUT</h5>
+                                <p class="text-muted card-text mb-4">Every link have ads now to teleport in premium room to support this project lifetime, but soon i will remove the ads, but now support my journey in college life!</p><button class="btn btn-primary disabled shadow" type="button" disabled="">Learn more</button>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-4">
-                        <div class="card shadow-lg" style="margin-bottom: -1px;padding-bottom: 0px;">
+                        <div class="card shadow-lg" style="margin-bottom: -1px;padding-bottom: 0px;height: 299.969px;">
                             <div class="card-body px-4 py-5 px-md-5" style="margin-bottom: 25px;">
                                 <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-person-check text-success">
                                         <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"></path>
                                         <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1z"></path>
                                     </svg></div>
-                                <h5 class="fw-bold card-title">User friendly</h5>
-                                <p class="text-muted card-text mb-4">This website is user friendly because it responds quickly&nbsp;</p><button class="btn btn-primary disabled shadow" type="button" disabled="">Learn more</button>
+                                <h5 class="fw-bold card-title">Easy to access</h5>
+                                <p class="text-muted card-text mb-4">Everyone have an access in this website because this is an open source.</p><button class="btn btn-primary disabled shadow" type="button" disabled="">Learn more</button>
                             </div>
                         </div>
                     </div>
-                    <div class="w-100"></div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="photo-gallery py-4 py-xl-5">
+        <div class="container-fluid p-0">
+            <div class="row g-0 mb-5" data-aos="fade-up" data-aos-duration="650">
+                <div class="col-md-8 col-xl-6 text-center mx-auto" data-aos="fade-up" data-aos-duration="650">
+                    <h2 data-aos="fade-up" data-aos-duration="650"><strong>The Latest Canva UI</strong></h2>
+                    <p data-aos="fade-up" data-aos-duration="650" class="w-lg-50">2024 Canva UI in every premium rooms</p>
+                </div>
+            </div>
+            <div class="row g-0 row-cols-1 row-cols-md-2 row-cols-xl-3 photos" data-aos="fade-up" data-aos-duration="650" data-bss-baguettebox="">
+                <div class="col-11 col-sm-11 col-md-10 col-lg-10 col-xl-10 col-xxl-11 text-center mx-auto item" data-aos="fade-up" data-aos-duration="650"><img class="img-fluid border rounded shadow-lg" data-aos="fade-up" data-aos-duration="650" src="assets/img/Screenshot%202024-07-13%20204320.png"></div>
             </div>
         </div>
     </section>
@@ -129,6 +166,7 @@
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
                     <p class="fw-bold text-success mb-2"><span style="color: rgb(55, 99, 244);">ROOMS SECTION</span></p>
                     <h3 class="fw-bold">Tap the room that you want to teleport your Canva Account</h3>
+                    <p>all links expired in August 13, 2024 and new link will deploy in <p id="bomb"></p></p>
                 </div>
             </div>
             <div data-aos="fade-up" data-aos-duration="650" class="py-5 p-lg-5">
@@ -137,7 +175,7 @@
                         <div class="card shadow-lg">
                             <div class="card-body text-center px-4 py-5 px-md-5" style="padding-bottom: 25px;margin-bottom: 24px;">
                                 <h5 class="fw-bold card-title">ROOM ID#3938</h5>
-                                <p class="text-muted card-text mb-4" style="font-size: 17px;"><strong>Canva premium room signature [C-tor]</strong></p><a class="btn btn-primary shadow" role="button" data-bss-hover-animate="wobble" target="_blank" href="https://www.canva.com/brand/join?token=0LjqThvBrFOqxyPel3C7lw&amp;referrer=team-invite">Teleport my Canva</a>
+                                <p class="text-muted card-text mb-4" style="font-size: 17px;"><strong>Canva premium room signature [C-tor]</strong></p><a class="btn btn-primary shadow" role="button" data-bss-hover-animate="wobble" target="_blank" href="https://try2link.com/ctorcanvaproject">Teleport my Canva</a>
                             </div>
                         </div>
                     </div>
@@ -145,7 +183,7 @@
                         <div class="card shadow-lg">
                             <div class="card-body text-center px-4 py-5 px-md-5" style="padding-bottom: 25px;margin-bottom: 24px;">
                                 <h5 class="fw-bold card-title">ROOM ID#3939</h5>
-                                <p class="text-muted card-text mb-4" style="font-size: 17px;"><strong>Canva premium room signature [C-tor]</strong></p><a class="btn btn-primary shadow" role="button" data-bss-hover-animate="wobble" target="_blank" href="https://www.canva.com/brand/join?token=h-Ss7kGSb1ND7HJJI93GYA&amp;referrer=team-invite">Teleport my Canva</a>
+                                <p class="text-muted card-text mb-4" style="font-size: 17px;"><strong>Canva premium room signature [C-tor]</strong></p><a class="btn btn-primary shadow" role="button" data-bss-hover-animate="wobble" target="_blank" href="https://try2link.com/ctorcanvaproject2">Teleport my Canva</a>
                             </div>
                         </div>
                     </div>
@@ -153,7 +191,7 @@
                         <div class="card shadow-lg">
                             <div class="card-body text-center px-4 py-5 px-md-5" style="padding-bottom: 25px;margin-bottom: 24px;">
                                 <h5 class="fw-bold card-title">ROOM ID#3940</h5>
-                                <p class="text-muted card-text mb-4" style="font-size: 17px;"><strong>Canva premium room signature [C-tor]</strong></p><a class="btn btn-primary shadow" role="button" data-bss-hover-animate="wobble" target="_blank" href="https://www.canva.com/brand/join?token=oIVZTUL-TeDsz8h3YeRe5Q&amp;referrer=team-invite">Teleport my Canva</a>
+                                <p class="text-muted card-text mb-4" style="font-size: 17px;"><strong>Canva premium room signature [C-tor]</strong></p><a class="btn btn-primary shadow" role="button" data-bss-hover-animate="wobble" target="_blank" href="https://try2link.com/ctorcanvaproject3">Teleport my Canva</a>
                             </div>
                         </div>
                     </div>
@@ -161,7 +199,7 @@
                         <div class="card shadow-lg">
                             <div class="card-body text-center px-4 py-5 px-md-5" style="padding-bottom: 25px;margin-bottom: 24px;">
                                 <h5 class="fw-bold card-title">ROOM ID#3941</h5>
-                                <p class="text-muted card-text mb-4" style="font-size: 17px;"><strong>Canva premium room signature [C-tor]</strong></p><a class="btn btn-primary disabled shadow" role="button" data-bss-hover-animate="wobble" target="_blank">Teleport my Canva</a>
+                                <p class="text-muted card-text mb-4" style="font-size: 17px;"><strong>Canva premium room signature [C-tor]</strong></p><a class="btn btn-primary shadow" role="button" data-bss-hover-animate="wobble" target="_blank" href="https://try2link.com/ctorcanvaproject4">Teleport my Canva</a>
                             </div>
                         </div>
                     </div>
@@ -169,7 +207,7 @@
                         <div class="card shadow-lg">
                             <div class="card-body text-center px-4 py-5 px-md-5" style="padding-bottom: 25px;margin-bottom: 24px;">
                                 <h5 class="fw-bold card-title">ROOM ID#3942</h5>
-                                <p class="text-muted card-text mb-4" style="font-size: 17px;"><strong>Canva premium room signature [C-tor]</strong></p><a class="btn btn-primary disabled shadow" role="button" data-bss-hover-animate="wobble" target="_blank">Teleport my Canva</a>
+                                <p class="text-muted card-text mb-4" style="font-size: 17px;"><strong>Canva premium room signature [C-tor]</strong></p><a class="btn btn-primary shadow" role="button" data-bss-hover-animate="wobble" target="_blank" href="https://try2link.com/ctorcanvaproject5">Teleport my Canva</a>
                             </div>
                         </div>
                     </div>
@@ -177,7 +215,7 @@
                         <div class="card shadow-lg">
                             <div class="card-body text-center px-4 py-5 px-md-5" style="padding-bottom: 25px;margin-bottom: 24px;">
                                 <h5 class="fw-bold card-title">ROOM ID#3943</h5>
-                                <p class="text-muted card-text mb-4" style="font-size: 17px;"><strong>Canva premium room signature [C-tor]</strong></p><a class="btn btn-primary disabled shadow" role="button" data-bss-hover-animate="wobble" target="_blank">Teleport my Canva</a>
+                                <p class="text-muted card-text mb-4" style="font-size: 17px;"><strong>Canva premium room signature [C-tor]</strong></p><a class="btn btn-primary shadow" role="button" data-bss-hover-animate="wobble" target="_blank" href="https://try2link.com/ctorcanvaproject6">Teleport my Canva</a>
                             </div>
                         </div>
                     </div>
@@ -244,10 +282,12 @@
             </div>
         </div>
     </footer>
-    <script src="assets/ctor-bootstrap/js/ctor.min.js"></script>
+    <script src="assets/ctor/js/ctor.min.js"></script>
     <script src="assets/js/aos.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/bold-and-bright.js"></script>
+    <script src="assets/js/Lightbox-Gallery-baguetteBox.min.js"></script>
+    <script src="assets/js/Lightbox-Gallery.js"></script>
 </body>
 
 </html>
