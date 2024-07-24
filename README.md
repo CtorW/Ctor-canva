@@ -1,5 +1,5 @@
 ## 📎 Telegram Channel 📎
-[![ClickHere](https://t.me/CanvaPH))
+https://t.me/CanvaPH
 ## ✨ Features ✨
 
 - **How to join?** Visit the link and tap the rooms💗
